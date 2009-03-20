@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	
+	<servlet>
+		<servlet-name>DisplayDaizhongServlet</servlet-name>
+		<servlet-class>com.credit.contract.main.controllers.DisplayDaizhongServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisplayDaizhongServlet</servlet-name>
+		<url-pattern>/servlet/DisplayDaizhongServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>XuanzeDaizhongServlet</servlet-name>
+		<servlet-class>com.credit.contract.main.controllers.XuanzeDaizhongServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>XuanzeDaizhongServlet</servlet-name>
+		<url-pattern>/servlet/XuanzeDaizhongServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+
+	<servlet>
+		<servlet-name>ZhuandaikuanServlet</servlet-name>		
+<servlet-class>com.credit.contract.zhuandaikuanxinxi.controllers.ZhuandaikuanServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ZhuandaikuanServlet</servlet-name>
+		<url-pattern>/servlet/ZhuandaikuanServlet</url-pattern>
+	</servlet-mapping>
+		
+	
+	<servlet>
+		<servlet-name>ZhuandaikuanWriteServlet</servlet-name>		
+<servlet-class>com.credit.contract.zhuandaikuanxinxi.controllers.ZhuandaikuanWriteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ZhuandaikuanWriteServlet</servlet-name>
+		<url-pattern>/servlet/ZhuandaikuanWriteServlet</url-pattern>
+	</servlet-mapping>
+	
+  
+	
+	
+	<servlet>
+  <servlet-name>CheckGuaranteecServlet</servlet-name>
+  <servlet-class>com.credit.contract.fromcontract.controllers.CheckGuaranteecServlet</servlet-class>
+ </servlet>
+ 
+ 
+  <servlet-mapping>
+  <servlet-name>CheckGuaranteecServlet</servlet-name>
+  <url-pattern>/servlet/CheckGuaranteecServlet</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+  <servlet-name>GuaranteecServlet</servlet-name>
+  <servlet-class>com.credit.contract.fromcontract.controllers.GuaranteecServlet</servlet-class>
+ </servlet>
+  <servlet>
+    <servlet-name>DeleteServlet</servlet-name>
+    <servlet-class>com.credit.contract.fromcontract.controllers.DeleteServlet</servlet-class>
+  </servlet> 
+ 
+  <servlet-mapping>
+  <servlet-name>GuaranteecServlet</servlet-name>
+  <url-pattern>/servlet/GuaranteecServlet</url-pattern>
+ </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteServlet</servlet-name>
+    <url-pattern>/servlet/DeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.credit.contract.jkht.controllers.spd01jkht</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/servlet/RegisterServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>AddServlet</servlet-name>
+		<servlet-class>com.credit.contract.benjintaizhang.controllers.AddServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>HetongLuruHeXiugaiServlet</servlet-name>
+    <servlet-class>com.credit.contract.main.controllers.HetongLuruHeXiugaiServlet</servlet-class>
+  </servlet>
+
+	
+	<servlet-mapping>
+		<servlet-name>AddServlet</servlet-name>
+		<url-pattern>/servlet/AddServlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HetongLuruHeXiugaiServlet</servlet-name>
+    <url-pattern>/servlet/HetongLuruHeXiugaiServlet</url-pattern>
+  </servlet-mapping>
+	
+	
+	
+	
+	
+	
+	
+	
+  <welcome-file-list>
+    <welcome-file>contract_main.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

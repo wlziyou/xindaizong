@@ -1,0 +1,116 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page import="com.credit.contract.fromcontract.models.*" %>
+
+
+<% 
+   Guaranteec guaranteecList = (Guaranteec)session.getAttribute("theGuaranteecinfo");
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    
+    <title>信贷-保证合同</title>
+	<link rel="stylesheet" href="../css/link.css" type="text/css"  media="screen"  charset="utf-8">
+
+  </head>
+  
+  <body> 
+  <div id="frame">
+		<div id="header">
+			<div id="signoutlink">
+				<span>Welcome !</span> | <a href="http://www.google.com">退出登录!</a>
+			</div>
+       		 <h1>信贷管理信息系统 <h id="module">- 客户信息</h></h1>
+       		 <div id="navibar">
+       		 	<ul>
+       		 		<li class="current_tab"><a href="信贷-选择保证合同.html">保证合同</a></li>
+       		 		<li><a href="信贷-选择抵押合同.html">抵押合同</a></li>
+       		 		<li><a href="信贷-选择质押合同.html">质押合同</a></li>
+       		 	</ul>
+       		 </div>
+        </div>
+        <div id="workspace">
+        	<h2 class="lrfpb">主合同（协议）标识信息</h2>
+        	<table>
+        		<tr>
+        			<td>客户全称</td>
+                	<td colpspan="3">（静态文本）</td>
+                </tr>
+                <tr>
+             		<td>营业执照）</td>
+             		<td colpspan="3">（静态文本）</td>
+             	</tr>
+             	<tr>
+             		<td >项目名称</td>
+             		<td colpspan="3">（静态文本） </td>
+             	</tr>
+        	    <tr>
+             		<td>贷种</td>
+             		<td>（静态文本）</td>
+             		<td>币种</td>
+             		<td>（静态文本）</td>
+                </tr>
+                <tr>
+             		<td>金额</td>
+             		<td>（静态文本）</td>
+             		<td>签订日期</td>
+             		<td>（静态文本）</td>
+                </tr>
+                 <tr>
+             		<td>主合同（协议）编号</td>
+             		<td>（静态文本）</td>
+             		<td>主合同（协议）系统编号</td>
+             		<td>（静态文本）</td>
+                </tr>
+             </table>
+             
+             
+             
+             
+             
+           <form action="../servlet/GuaranteecServlet" method="post">
+        	<h2 class="lrfpb">保证合同信息</h2>
+             <table>
+        		<tr>
+        			<td>保证合同编号：</td>
+                	<td colpspan="3"><input type="text" name="f61sgbh" value="<%=guaranteecList.getBzhtsgbh()%>"></td>
+                </tr>
+                <tr>
+             		<td>保证人全称：</td>
+             		<td colpspan="3"><input type="text" name="f61bzbh" value="<%=guaranteecList.getBzrbh()%>"></td>
+             	</tr>
+             	<tr>
+             		<td >保证金额：</td>
+             		<td><input type="text" name="f61bzje"><%=guaranteecList.getBzje()%> </td>
+             		<td>签订日期：</td>
+             		<td><input type="text" name="f61qdrq"><%=guaranteecList.getQdrq()%></td>
+             	</tr>
+        	    <tr>
+        	 		<td>保证人分类：</td>
+        	 	    <td colpspan="3">
+							<input <% if(guaranteecList.getBzrfl().equals("value"))out.println("checked=\"checked\"");  %>type="radio" value = "1" name="f61bzfl" >国有商业银行及政策性银行<br>
+							<input <% if(guaranteecList.getBzrfl().equals("value"))out.println("checked=\"checked\"");  %>type="radio" value = "2" name="f61bzfl">其他银行<br>
+							<input <% if(guaranteecList.getBzrfl().equals("value"))out.println("checked=\"checked\"");  %>type="radio" value = "3" name="f61bzfl">全国性非银行金融机构<br>
+							<input <% if(guaranteecList.getBzrfl().equals("value"))out.println("checked=\"checked\"");  %>type="radio" value = "4" name="f61bzfl">省级非银行金融机构<br>
+					</td>
+				</tr>
+             </table>
+             <h3 class="lrfpb">其他违约责任</h3>
+             <textarea  rows="3" cols="140" name="f61wyzr"><%=guaranteecList.getWyzr()%></textarea>
+             <h3 class="lrfpb">保证限制条款</h3>
+             <textarea  rows="3" cols="140" name="f61xztk"><%=guaranteecList.getBzxztk()%></textarea>
+        </div>
+        <div class="lrfpb">
+        <input type="submit" value="提交">
+        <a href="信贷-选择保证合同.html"> 
+        <input type="submit" value="返回"></a>
+        </div>
+         </form> 
+        <div id="footer">
+        	<p>&copy 2009 CloudCross</p>
+        </div>
+	</div>
+</body>
+</html>
+

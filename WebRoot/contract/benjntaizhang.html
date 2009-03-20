@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>本金台帐录入界面</title>
+	</head>
+	
+	<body id="benjntaizhang">
+		
+		<form action="servlet/AddServlet" method="post" accept-charset="utf-8">
+			<fieldset>
+				<div id="tz">
+					<h2>本金台帐录入</h2>
+					<ul>
+						<li name="wk">
+							<input type="text" value="摘要" />
+							<input type="text" value="本金发生额"/>
+							<input type="text" value="日期" />
+						</li>
+						<li>
+							<input type="text" name="f85zyxh" />
+							<input type="text" name="f85fse" />
+							<input type="text" name="f85rq" />
+						</li>
+					
+					</ul>			
+				</div>			
+				<div id="gn">
+					<input type="submit" name="tj" value="提交" >
+					<input type="submit" name="fh" value="返回">
+				</div>
+				
+			</fieldset>
+		</form>
+	</body>
+</html>

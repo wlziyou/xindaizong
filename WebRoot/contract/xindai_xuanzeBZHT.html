@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+	<title>信贷-保证合同</title>
+	<link rel="stylesheet" href="css/link.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<div id="frame">
+		<div id="header">
+			<div id="signoutlink">
+				<span>Welcome !</span> | <a href="http://www.google.com">退出登录!</a>
+			</div>
+       		 <h1>信贷管理信息系统 <h id="module">- 客户信息</h></h1>
+       		 <div id="navibar">
+       		 	<ul>
+       		 		<li class="current_tab"><a href="信贷-选择保证合同.html">保证合同</a></li>
+       		 		<li ><a href="信贷-选择抵押合同.html">抵押合同</a></li>
+       		 		<li><a href="信贷-选择质押合同.html">质押合同</a></li>
+       		 	</ul>
+       		 </div>
+        </div>
+        <div id="workspace">
+        	<h2 class="lrfpb">选择保证合同（2/32）</h2>
+        	<form action="servlet/CheckGuaranteecServlet" method="post">
+        	<table>
+        		<tr>
+        			<td>保证合同编号</td>
+                	<td ><input type="text" name = "f61sgbh" id="f61sgbh"></td>
+                	<td>保证人编号</td>
+                	<td ><input type="text"></td>
+                </tr>
+                <tr>
+             		<td>保证人名称</td>
+             		<td><input type="text"></td>
+             	</tr>
+             	<tr>
+             		<td >保证金额</td>
+             		<td><input type="text"> </td>
+             		<td>登记日期</td>
+ 					<td><input type="text"> </td>
+             	</tr>
+             	</table>
+        	    
+        	 			<input type="button"  value="第一个"> 
+            			<input type="button"  value="前一个">
+            		    <input type="button"  value="后一个">
+            		    <input type="button"  value="最后一个">
+        		    
+        	 		   <input type="button" value="删除" onclick="location='servlet/DeleteServlet'">
+            			<a href="contract/xindai_BZHT.html"><input type="button" value="增加"></a>
+            			
+        		
+         </div>
+         <div class="lrfpb">
+        	<input type="submit" value="确定"> 
+        	<input type="submit" value="返回"> 
+        </div>
+        </form>
+        <div id="footer">
+        	<p>&copy 2009 CloudCross</p>
+        </div>
+	</div>
+</body>
+</html>
